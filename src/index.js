@@ -56,9 +56,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className="hero is-medium is-centered" style={{padding: "15px"}}>
-          <figure className="image">
-						<img src="logo.png" alt="TrekNoise Logo" style={{width: "50%", height: "10%", position: "relative", left: "25%"}}></img>
+        <div className="hero is-medium" style={{padding: "15px"}}>
+          <figure className="image is-256x256 container">
+						<img src="logo.png" alt="TrekNoise Logo"></img>
 					</figure>
           <div className="box">
           <div className="title">Noise</div>

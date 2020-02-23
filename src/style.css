@@ -4,7 +4,7 @@ h1, p {
 
 html {
   height: 100vh;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 0%);
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, rgb(26,28,55) 0%);
 }
 
 #stars {
