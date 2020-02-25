@@ -9,11 +9,13 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
+		"rewrites": [{
+			"source": "**/",
+			"destination": "index.html"
+		},
+		{
+			"source": "**/admin",
+			"destination": "admin.html"
+		}]
   }
 }
