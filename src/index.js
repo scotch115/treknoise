@@ -4,7 +4,6 @@ import './style.css';
 import PropTypes from 'prop-types';
 import firebase from 'firebase';
 import { DB_CONFIG } from './Config';
-import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 
 class App extends Component {
   constructor() {
@@ -19,15 +18,6 @@ class App extends Component {
 
   componentDidMount() {
 		const itemsRef = firebase.database().ref('posts/');
-		// TODO: Add user-specific database folders based on login
-		// firebase.auth().onAuthStateChanged(function(user){
-		// 	if (user) {
-		// 		itemsRef = firebase.database().ref(`entries/${firebase.auth().currentUser.displayName}`);
-		// 	}
-		// 	else {
-		// 		itemsRef = firebase.database().ref('entries/default');
-		// 	}
-		// });
 		itemsRef.on('value', (snapshot) => {
 			let entries = snapshot.val();
 			let newState = [];
@@ -41,17 +31,8 @@ class App extends Component {
 			this.setState({
 				entries: newState
 			});
-		// });
-		// this.unregisterAuthObserver = firebase.auth().onAuthStateChanged(
-		// 	(user) => this.setState({isSignedIn: !!user})
-		// );
 	  })
   }
-
-	removeItem(itemId) {
-		const itemRef = firebase.database().ref(`/posts/${itemId}`);
-		itemRef.remove();
-	}
 
   render() {
     return (
@@ -68,7 +49,6 @@ class App extends Component {
               {this.state.entries.map((entry) => {
                 return(
                   <div className="tile box is-child notification is-white">
-                  <button className="delete" onClick={() => this.removeItem(entry.id)}></button>
                   <p className="title is-5">{entry.title}</p>
                   <div className="has-text-centered" style={{padding: "10px"}}></div>
                   {entry.articleBody}
