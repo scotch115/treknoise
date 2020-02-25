@@ -1,6 +1,7 @@
 {
   "rules": {
     ".read": "true",
-    ".write": "true"
+		".write": "auth.token.email_verified == true &&
+      	             auth.uid == 'vaJ1SXLPO7TcSokWdJExqqMitdY2' "
   }
 }
