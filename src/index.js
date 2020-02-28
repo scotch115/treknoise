@@ -51,6 +51,7 @@ class App extends Component {
                   <p className="title is-5">{entry.title}</p>
                   <div className="has-text-centered" style={{padding: "10px"}}></div>
                   {entry.articleBody}
+                  <div id="replybox"></div>
                   </div>
                 )
               })}
