@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import './style.css';
-import PropTypes from 'prop-types';
 import firebase from 'firebase';
 import { DB_CONFIG } from './Config';
 
