@@ -47,7 +47,7 @@ class App extends Component {
             <div className="tile is-vertical is-parent">
               {this.state.entries.map((entry) => {
                 return(
-                  <div className="tile box is-child notification is-white" style={{ whiteSpace: "pre-line" }}>
+                  <div className="tile box is-child notification is-white">
                   <p className="title is-5">{entry.title}</p>
                   <div className="has-text-centered" style={{padding: "10px"}}></div>
                   {entry.articleBody}
